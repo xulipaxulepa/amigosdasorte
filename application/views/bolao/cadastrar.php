@@ -25,11 +25,11 @@
                     <div class="panel-body">
                         <?php
                         $jogos = array(
-                            'Mega Sena',
-                            'Loto Fácil',
-                            'Dupla Sena'
+                            'Mega Sena' => 'Mega Sena',
+                            'Loto Fácil' => 'Loto Facil',
+                            'Dupla Sena' => 'Dupla Sena',
                         );
-                        
+                        echo "<br />";
                         echo form_open('index.php/bolao/cadastrar');
                         echo form_label('Jogo (*)') . "<br />";
                         echo form_dropdown('jogo', $jogos), set_value('jogo') . "<br />";
@@ -41,7 +41,7 @@
                         echo form_input(array('id' => 'valorcota', 'name' => 'valorcota', 'class' => 'form-control'), set_value('valorcota')) . "<br />";
 
                         echo form_label('Total de cotas (*)') . "<br />";
-                        echo form_input(array('id' => 'totalcotas', 'class' => 'form-control bfh-number'), set_value('totalcotas')) . "<br />";
+                        echo form_input(array('id' => 'totalcota', 'name' =>  'totalcota', 'class' => 'form-control'), set_value('totalcota')) . "<br />";
                         
                         ?>
                         <?php

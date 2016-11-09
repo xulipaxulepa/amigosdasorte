@@ -23,8 +23,7 @@ class Bolao extends CI_Controller {
 
         if ($this->form_validation->run()):
             $dados = elements(array('jogo', 'grupo', 'valorcota', 'totalcota'), $this->input->post());
-            $totalcotas = elements(array('totalcotas'), $this->input->post());
-            $dados['cotadisponivel'] = $totalcotas;
+            $dados['cotadisponivel'] = $dados['totalcota'];
             $this->BolaoDAO->do_insert($dados);
         endif;
 
@@ -40,7 +39,7 @@ class Bolao extends CI_Controller {
         $dados = array(
             'titulo' => 'Amigos Da Sorte',
             'tela' => 'bolao/consultar',
-            'bolao' => $bolao,
+            'bolao' => $bolao
         );
         $this->load->view("exibirDados", $dados);
     }
