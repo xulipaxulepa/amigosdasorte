@@ -36,17 +36,13 @@ class Bolao extends CI_Controller {
     }
 
     public function consultar() {
-        if (isset($this->session->isAdministrador)):
-            $bolao = $this->InstituicaoDAO->get_all();
-            $dados = array(
-                'titulo' => 'Amigos Da Sorte',
-                'tela' => 'bolao/consultar',
-                'bolao' => $bolao,
-            );
-            $this->load->view("exibirDados", $dados);
-        else:
-            redirect('inicio/');
-        endif;
+        $bolao = $this->InstituicaoDAO->get_all();
+        $dados = array(
+            'titulo' => 'Amigos Da Sorte',
+            'tela' => 'bolao/consultar',
+            'bolao' => $bolao,
+        );
+        $this->load->view("exibirDados", $dados);
     }
 
 }

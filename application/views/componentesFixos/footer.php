@@ -1,4 +1,5 @@
 <footer class="footer">
+        
         <p class="text-muted">Thallys, modifique o footer para ficar igual ao que o cliente quer!</p>
 </footer>
 
