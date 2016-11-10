@@ -21,5 +21,14 @@ class Pagina extends CI_Controller {
         $this->load->view("exibirDados", $dados);
        
     }
+    
+    public function Atendimento() {
+        $dados = array(
+            'titulo' => 'Amigos Da Sorte',
+            'tela' => 'paginasStaticas/Atendimento',
+        );
+        $this->load->view("exibirDados", $dados);
+       
+    }
 
 }

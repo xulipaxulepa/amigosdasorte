@@ -14,6 +14,7 @@ class Inicio extends CI_Controller {
     }
     
     public function index() {
+        
         $bolao = $this->BolaoDAO->get_all();
         $dados = array(
             'titulo' => 'Amigos da Sorte',
