@@ -2,53 +2,35 @@
 <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
-        <h2 class="text-center"> Instituições Cadastradas </h2>
+        <h2 class="text-center"> Bolões Cadastradas </h2>
         <table class="table table-striped">
             <tr>
-                <th>Nome</th>
-                <th>CNPJ</th>
-                <th>Telefone</th>
-                <th>Email</th>
-                <th>Endereço</th>
-                <th>Descriçao</th>
-                <th>Status</th>
-                <th>Alterar Status</th>
+                <th>Jogo</th>
+                <th>Grupo</th>
+                <th>valor da cotas</th>
+                <th>total de cotas</th>
+                <th>cotas disponiveis</th>
                 
             </tr>
             <?php
-            foreach ($instituicoes->result() as $instituicao) {
+            foreach ($bolao->result() as $boloes) {
                 echo '<tr>';
                 echo '<td>';
-                echo $instituicao->nome;
+                echo $boloes->jogo;
                 echo '</td>';
                 echo '<td>';
-                echo $instituicao->cnpj;
+                echo $boloes->grupo;
                 echo '</td>';
                 echo '<td>';
-                echo $instituicao->telefone;
+                echo $boloes->valorcota;
                 echo '</td>';
                 echo '<td>';
-                echo $instituicao->email;
+                echo $boloes->totalcota;
                 echo '</td>';
                 echo '<td>';
-                echo $instituicao->endereco;
+                echo $boloes->cotadisponivel;
                 echo '</td>';
                 echo '<td>';
-                echo $instituicao->descricao;
-                echo '</td>';
-                echo '<td>';
-                if ($instituicao->isDisponivel)
-                    echo '<span class="label label-success"> Ativo </span>';
-                else
-                    echo '<span class="label label-danger"> Desativado </span>';
-                echo '</td>';
-                echo '<td>';
-                if($instituicao->isDisponivel)
-                    echo '<a href="'. base_url('Instituicao/desativarInstituicao/'.$instituicao->id).'" class="btn btn-danger btn-xs" role="button"> Desativar </a>';
-                else
-                    echo '<a href="'. base_url('Instituicao/ativarInstituicao/'.$instituicao->id).'" class="btn btn-success btn-xs" role="button"> Ativar </a>';
-                echo '</td>';
-                echo '</tr>';
                 }
             ?>
             

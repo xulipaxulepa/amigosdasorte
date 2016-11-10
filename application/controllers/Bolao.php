@@ -35,7 +35,7 @@ class Bolao extends CI_Controller {
     }
 
     public function consultar() {
-        $bolao = $this->InstituicaoDAO->get_all();
+        $bolao = $this->BolaoDAO->get_all();
         $dados = array(
             'titulo' => 'Amigos Da Sorte',
             'tela' => 'bolao/consultar',
