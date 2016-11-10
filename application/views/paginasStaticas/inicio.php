@@ -12,6 +12,7 @@
                 <th>total de cotas</th>
                 <th>cotas disponiveis</th>
                 <th>Qtde desejadas</th>
+                <th>Compre Aqui</th>
             </tr>
             <?php
             foreach ($bolao->result() as $boloes) {
@@ -40,7 +41,9 @@
   <option value="4">4</option>
 </select>';
                     echo '</td>';
-                    
+                    echo '<td>';
+        echo '<a href="" class="btn btn-success btn-xs" role="button"> Comprar </a>';            
+        echo '</td>';
                     echo '</tr>';
                     
                 endif;
@@ -58,6 +61,7 @@
                 <th>total de cotas</th>
                 <th>cotas disponiveis</th>
                 <th>Qtde desejadas</th>
+                <th>Compre Aqui</th>
 
             </tr>
             <?php
@@ -87,6 +91,9 @@
   <option value="4">4</option>
 </select>';
                     echo '</td>';
+                    echo '<td>';
+        echo '<a href="" class="btn btn-success btn-xs" role="button"> Comprar </a>';            
+        echo '</td>';
                     echo '</tr>';
                 endif;
             }
@@ -103,6 +110,7 @@
                 <th>total de cotas</th>
                 <th>cotas disponiveis</th>
                 <th>Qtde desejadas</th>
+                <th>Compre Aqui</th>
 
             </tr>
 <?php
@@ -132,6 +140,9 @@ foreach ($bolao->result() as $boloes) {
   <option value="4">4</option>
 </select>';
                     echo '</td>';
+                    echo '<td>';
+        echo '<a href="" class="btn btn-success btn-xs" role="button"> Comprar </a>';            
+        echo '</td>';
         echo '</tr>';
     endif;
 }

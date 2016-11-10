@@ -16,5 +16,6 @@
 
     <title> <?php echo $titulo ?></title>
     
+<h1>Thallys, coloque a imagem aqui!!!</h1>
 </head>
 <body>
