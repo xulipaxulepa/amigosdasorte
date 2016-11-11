@@ -40,7 +40,7 @@ class Usuario_model extends CI_Model {
             if ($query->num_rows() > 0 && $query->num_rows() == 1)
                 $tipo = "admin";
             else {
-                $sql = "SELECT * FROM doadores WHERE email = ? AND senha = ?";
+                $sql = "SELECT * FROM Usuario WHERE email = ? AND senha = ?";
                 $query = $this->db->query($sql, array($email, $senha));
                 if ($query->num_rows() > 0 && $query->num_rows() == 1) {
                     $tipo = "doador";

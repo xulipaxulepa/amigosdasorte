@@ -34,12 +34,11 @@
                     echo $boloes->cotadisponivel;
                     echo '</td>';
                     echo '<td>';
-                    echo ' <select>
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-</select>';
+                    echo '<select>';
+                    for($i = 1;$i <= $boloes->cotadisponivel; $i++){ 
+                    echo '<option value="'.$i.'">'.$i.'</option>';
+                    }
+                    echo '</select>' ;
                     echo '</td>';
                     echo '<td>';
         echo '<a href="" class="btn btn-success btn-xs" role="button"> Comprar </a>';            
@@ -84,12 +83,11 @@
                     echo $boloes->cotadisponivel;
                     echo '</td>';
                     echo '<td>';
-                    echo ' <select>
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-</select>';
+                    echo '<select>';
+                    for($i = 1;$i <= $boloes->cotadisponivel; $i++){ 
+                    echo '<option value="'.$i.'">'.$i.'</option>';
+                    }
+                    echo '</select>' ;
                     echo '</td>';
                     echo '<td>';
         echo '<a href="" class="btn btn-success btn-xs" role="button"> Comprar </a>';            
@@ -133,14 +131,13 @@ foreach ($bolao->result() as $boloes) {
         echo $boloes->cotadisponivel;
         echo '</td>';
         echo '<td>';
-                    echo ' <select>
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-</select>';
-                    echo '</td>';
-                    echo '<td>';
+        echo '<select>';
+        for($i = 1;$i <= $boloes->cotadisponivel; $i++){ 
+        echo '<option value="'.$i.'">'.$i.'</option>';
+        }
+        echo '</select>' ;
+        echo '</td>';
+        echo '<td>';
         echo '<a href="" class="btn btn-success btn-xs" role="button"> Comprar </a>';            
         echo '</td>';
         echo '</tr>';
@@ -154,3 +151,7 @@ foreach ($bolao->result() as $boloes) {
 
     <div class="col-md-2"></div>
 </div>
+<br>
+<br>
+<br>
+<br>

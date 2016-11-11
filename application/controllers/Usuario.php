@@ -31,6 +31,7 @@ class Usuario extends CI_Controller
         if ($this->form_validation->run()):
             $dados = elements(array('nome', 'dataNascimento', 'email', 'senha'), $this->input->post());
             $dados['senha'] = md5($dados['senha']);
+            $dados['isAdministrador'] = 0;
             $this->UsuarioDAO->do_insert($dados);
         endif;
 

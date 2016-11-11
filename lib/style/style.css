@@ -1,35 +1,35 @@
 .navbar-default {
-  background-color: #83a484;
-  border-color: #166127;
+  background-color: #FFB401;
+  border-color: #C88D02;
 }
 .navbar-default .navbar-brand {
-  color: #ffffff;
+  color: #C88D02;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #d0f859;
+  color: #C88D02;
 }
 .navbar-default .navbar-text {
-  color: #ffffff;
+  color: #000;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #ffffff;
+  color: #000;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #d0f859;
+  color: #000;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #d0f859;
-  background-color: #166127;
+  color: #000;
+  background-color: #000;
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-  color: #d0f859;
-  background-color: #166127;
+  color: #000;
+  background-color: #000;
 }
 .navbar-default .navbar-toggle {
   border-color: #166127;
@@ -46,7 +46,7 @@
   border-color: #ffffff;
 }
 .navbar-default .navbar-link {
-  color: #ffffff;
+  color: #000;
 }
 .navbar-default .navbar-link:hover {
   color: #d0f859;
@@ -66,6 +66,14 @@
     color: #d0f859;
     background-color: #166127;
   }
+}
+
+#menubar{
+    background-color: #FFB401;    
+}
+
+#imagemlogo{
+    width: 100%;
 }
 
 #comojogar{

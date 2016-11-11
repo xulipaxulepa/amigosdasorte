@@ -16,6 +16,6 @@
 
     <title> <?php echo $titulo ?></title>
     
-<h1>Thallys, coloque a imagem aqui!!!</h1>
+<img id="imagemlogo" src="http://127.0.0.1/AmigosDaSorte/Imagens/bannersite.jpg">
 </head>
 <body>
