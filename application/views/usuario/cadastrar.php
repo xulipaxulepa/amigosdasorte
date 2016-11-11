@@ -1,17 +1,24 @@
-<?php
-if (validation_errors() != NULL):
-    echo validation_errors();
-endif;
 
-//if ($this->session->flashdata('cadastrook')):
-//echo $this->session->flashdata('cadastrook');
-//endif;
-?>
 
 <div class="panel-body">
     <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6">
+            <?php
+        if (validation_errors() != NULL):
+            echo '<div class="alert alert-danger" role="alert">';
+            echo '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
+            echo validation_errors();
+            echo '</div>';
+        endif;
+
+        if ($this->session->flashdata('cadastrook')):
+            echo '<div class="alert alert-success" role="alert">';
+            echo '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
+            echo $this->session->flashdata('cadastrook');
+            echo '</div>';
+        endif;
+        ?>
             <div class="panel panel-success">
                 <div class="panel-heading">
                     <h3 class="panel-title">
