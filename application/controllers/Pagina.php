@@ -30,5 +30,13 @@ class Pagina extends CI_Controller {
         $this->load->view("exibirDados", $dados);
        
     }
-
+    
+public function QuemSomos() {
+        $dados = array(
+            'titulo' => 'Amigos Da Sorte',
+            'tela' => 'paginasStaticas/QuemSomos',
+        );
+        $this->load->view("exibirDados", $dados);
+       
+    }
 }

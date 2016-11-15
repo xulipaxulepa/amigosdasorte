@@ -3,16 +3,16 @@
     <div class="col-md-2"></div>
     <div class="col-md-8">
 
-        <h1>Mega Sena</h1>
+        <a href="http://pt-br.tinypic.com?ref=2d9hua" target="_blank"><img src="http://i66.tinypic.com/2d9hua.jpg" border="0" alt="Image and video hosting by TinyPic"></a>
         <table class="table table-striped">
             <tr>
                 <th>Grupo</th>
-                <th>Lista de Jogos</th>
-                <th>valor da cotas</th>
-                <th>total de cotas</th>
-                <th>cotas disponiveis</th>
-                <th>Qtde desejadas</th>
-                <th>Compre Aqui</th>
+                <th><a href="http://pt-br.tinypic.com?ref=708bjk" target="_blank"><img src="http://i64.tinypic.com/708bjk.jpg" border="0" alt="Image and video hosting by TinyPic"></a>Lista de Jogos</th>
+                <th><a href="http://pt-br.tinypic.com?ref=708bjk" target="_blank"><img src="http://i64.tinypic.com/708bjk.jpg" border="0" alt="Image and video hosting by TinyPic"></a>Valor das Cotas</th>
+                <th><a href="http://pt-br.tinypic.com?ref=708bjk" target="_blank"><img src="http://i64.tinypic.com/708bjk.jpg" border="0" alt="Image and video hosting by TinyPic"></a>Total de Cotas</th>
+                <th><a href="http://pt-br.tinypic.com?ref=708bjk" target="_blank"><img src="http://i64.tinypic.com/708bjk.jpg" border="0" alt="Image and video hosting by TinyPic"></a>Cotas Disponiveis</th>
+                <th><a href="http://pt-br.tinypic.com?ref=708bjk" target="_blank"><img src="http://i64.tinypic.com/708bjk.jpg" border="0" alt="Image and video hosting by TinyPic"></a>Quantidade Desejadas</th>
+                <th>Compre Aqui!</th>
             </tr>
             <?php
             foreach ($bolao->result() as $boloes) {
@@ -22,7 +22,7 @@
                     echo $boloes->grupo;
                     echo '</td>';
                     echo '<td>';
-                    echo '<h3>***</h3>';
+                    echo '<a href="http://pt-br.tinypic.com?ref=r9n9eq" target="_blank"><img src="http://i67.tinypic.com/r9n9eq.jpg" border="0" alt="Image and video hosting by TinyPic"></a>';
                     echo '</td>';
                     echo '<td>';
                     echo $boloes->valorcota;
@@ -51,17 +51,16 @@
 
         </table>
 
-        <h1>Loto Facil</h1>
+        <a href="http://pt-br.tinypic.com?ref=npq1zr" target="_blank"><img src="http://i66.tinypic.com/npq1zr.jpg" border="0" alt="Image and video hosting by TinyPic"></a>
         <table class="table table-striped">
-            <tr>
+           <tr>
                 <th>Grupo</th>
-                <th>Lista de Jogos</th>
-                <th>valor da cotas</th>
-                <th>total de cotas</th>
-                <th>cotas disponiveis</th>
-                <th>Qtde desejadas</th>
-                <th>Compre Aqui</th>
-
+                <th><a href="http://pt-br.tinypic.com?ref=708bjk" target="_blank"><img src="http://i64.tinypic.com/708bjk.jpg" border="0" alt="Image and video hosting by TinyPic"></a>Lista de Jogos</th>
+                <th><a href="http://pt-br.tinypic.com?ref=708bjk" target="_blank"><img src="http://i64.tinypic.com/708bjk.jpg" border="0" alt="Image and video hosting by TinyPic"></a>Valor das Cotas</th>
+                <th><a href="http://pt-br.tinypic.com?ref=708bjk" target="_blank"><img src="http://i64.tinypic.com/708bjk.jpg" border="0" alt="Image and video hosting by TinyPic"></a>Total de Cotas</th>
+                <th><a href="http://pt-br.tinypic.com?ref=708bjk" target="_blank"><img src="http://i64.tinypic.com/708bjk.jpg" border="0" alt="Image and video hosting by TinyPic"></a>Cotas Disponiveis</th>
+                <th><a href="http://pt-br.tinypic.com?ref=708bjk" target="_blank"><img src="http://i64.tinypic.com/708bjk.jpg" border="0" alt="Image and video hosting by TinyPic"></a>Quantidade Desejadas</th>
+                <th>Compre Aqui!</th>
             </tr>
             <?php
             foreach ($bolao->result() as $boloes) {
@@ -71,7 +70,7 @@
                     echo $boloes->grupo;
                     echo '</td>';
                     echo '<td>';
-                    echo '<h3>***</h3>';
+                    echo '<a href="http://pt-br.tinypic.com?ref=r9n9eq" target="_blank"><img src="http://i67.tinypic.com/r9n9eq.jpg" border="0" alt="Image and video hosting by TinyPic"></a>';
                     echo '</td>';
                     echo '<td>';
                     echo $boloes->valorcota;
@@ -99,17 +98,16 @@
 
         </table>
 
-        <h1>Dupla Sena</h1>
+        <a href="http://pt-br.tinypic.com?ref=2hh3eoy" target="_blank"><img src="http://i65.tinypic.com/2hh3eoy.jpg" border="0" alt="Image and video hosting by TinyPic"></a>
         <table class="table table-striped">
-            <tr>
+           <tr>
                 <th>Grupo</th>
-                <th>Lista de Jogos</th>
-                <th>valor da cotas</th>
-                <th>total de cotas</th>
-                <th>cotas disponiveis</th>
-                <th>Qtde desejadas</th>
-                <th>Compre Aqui</th>
-
+                <th><a href="http://pt-br.tinypic.com?ref=708bjk" target="_blank"><img src="http://i64.tinypic.com/708bjk.jpg" border="0" alt="Image and video hosting by TinyPic"></a>Lista de Jogos</th>
+                <th><a href="http://pt-br.tinypic.com?ref=708bjk" target="_blank"><img src="http://i64.tinypic.com/708bjk.jpg" border="0" alt="Image and video hosting by TinyPic"></a>Valor das Cotas</th>
+                <th><a href="http://pt-br.tinypic.com?ref=708bjk" target="_blank"><img src="http://i64.tinypic.com/708bjk.jpg" border="0" alt="Image and video hosting by TinyPic"></a>Total de Cotas</th>
+                <th><a href="http://pt-br.tinypic.com?ref=708bjk" target="_blank"><img src="http://i64.tinypic.com/708bjk.jpg" border="0" alt="Image and video hosting by TinyPic"></a>Cotas Disponiveis</th>
+                <th><a href="http://pt-br.tinypic.com?ref=708bjk" target="_blank"><img src="http://i64.tinypic.com/708bjk.jpg" border="0" alt="Image and video hosting by TinyPic"></a>Quantidade Desejadas</th>
+                <th>Compre Aqui!</th>
             </tr>
 <?php
 foreach ($bolao->result() as $boloes) {
@@ -119,7 +117,7 @@ foreach ($bolao->result() as $boloes) {
         echo $boloes->grupo;
         echo '</td>';
         echo '<td>';
-        echo '<h3>***</h3>';
+        echo '<a href="http://pt-br.tinypic.com?ref=r9n9eq" target="_blank"><img src="http://i67.tinypic.com/r9n9eq.jpg" border="0" alt="Image and video hosting by TinyPic"></a>';
         echo '</td>';
         echo '<td>';
         echo $boloes->valorcota;

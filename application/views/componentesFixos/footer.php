@@ -1,6 +1,16 @@
 <footer class="footer">
         
-        <p class="text-muted">Thallys, modifique o footer para ficar igual ao que o cliente quer!</p>
+   <a href = "<?php echo base_url(""); ?>"> Home /</a>
+   <a href = "<?php echo base_url(""); ?>"> Regulamento /</a>
+   <a href = "<?php echo base_url(""); ?>"> Bilhetes Premiados /</a>
+   <a href = "<?php echo base_url(""); ?>"> Jogar Bolões /</a>
+   <a href = "<?php echo base_url(""); ?>"> Fale Conosco /</a>
+   <br>
+   
+   contato@amigodasorte.com.br<br>
+   (38)99169-8134 Tim-WhatsApp<br>
+   www.amigodasorte.com.br
+      
 </footer>
 
 <!-- Jquery -->
