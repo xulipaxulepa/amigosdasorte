@@ -41,7 +41,7 @@
                     echo '</select>' ;
                     echo '</td>';
                     echo '<td>';
-        echo '<a href="" class="btn btn-success btn-xs" role="button"> Comprar </a>';            
+        echo '<a href="'. base_url('bolao/comprar').'" class="btn btn-success btn-xs" role="button"> Comprar </a>';            
         echo '</td>';
                     echo '</tr>';
                     

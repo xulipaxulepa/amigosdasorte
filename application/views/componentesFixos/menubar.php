@@ -22,10 +22,12 @@
                 <li><a href="<?php echo base_url("usuario/logout")?>">Sair</a></li>
                 <?php } else { ?>
                     <li><a href = "<?php echo base_url(""); ?>"> Home /</a></li>
+                    <li><a href = "<?php echo base_url("Bolao/Consultar"); ?>"> Bolões Lotéricos /</a></li>
+                    <li><a href = "<?php echo base_url("pagina/Premiacoes"); ?>"> Premiações /</a></li>
                     <li><a href = "<?php echo base_url("pagina/Atendimento"); ?>"> Atendimento /</a></li>
-                    <li><a href = "<?php echo base_url("pagina/QuemSomos"); ?>"> Quem Somos /</a></li>                    
-                    <li><a href = "<?php echo base_url("Pagina/Regulamento"); ?>"> Regulamento /</a></li>
                     <li><a href = "<?php echo base_url("Usuario/Cadastrar"); ?>"> Cadastre-se /</a></li>
+                    <li><a href = "<?php echo base_url("Usuario/login"); ?>"> Acessar Conta /</a></li>
+                    
                 <?php } ?>    
             </ul>
 

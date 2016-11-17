@@ -43,5 +43,13 @@ class Bolao extends CI_Controller {
         );
         $this->load->view("exibirDados", $dados);
     }
+    
+    public function comprar() {
+        $dados = array(
+            'titulo' => 'Amigos Da Sorte',
+            'tela' => 'bolao/comprar',
+        );
+        $this->load->view("exibirDados", $dados);
+    }
 
 }
