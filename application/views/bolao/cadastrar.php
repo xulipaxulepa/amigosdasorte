@@ -30,7 +30,7 @@
                             'Dupla Sena' => 'Dupla Sena',
                         );
                         echo "<br />";
-                        echo form_open('index.php/bolao/cadastrar');
+                        echo form_open_multipart('index.php/bolao/cadastrar');
                         echo form_label('Jogo (*)') . "<br />";
                         echo form_dropdown('jogo', $jogos), set_value('jogo') . "<br />";
 
@@ -41,8 +41,7 @@
                         echo form_input(array('id' => 'valorcota', 'name' => 'valorcota', 'class' => 'form-control'), set_value('valorcota')) . "<br />";
 
                         echo form_label('Total de cotas (*)') . "<br />";
-                        echo form_input(array('id' => 'totalcota', 'name' =>  'totalcota', 'class' => 'form-control'), set_value('totalcota')) . "<br />";
-                        
+                        echo form_input(array('id' => 'totalcota', 'name' => 'totalcota', 'class' => 'form-control'), set_value('totalcota')) . "<br />";
                         ?>
                         <?php
                         echo '<span id="sumit" style="display: inline;float: right;">';
@@ -54,6 +53,10 @@
                 </div>
             </div>
         </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
     </div>
-    <div class="col-md-2"></div>
-</div>
+

@@ -13,6 +13,7 @@ class Bolao extends CI_Controller {
         $this->load->library('table');
         $this->load->library('session');
         $this->load->model('Bolao_model', "BolaoDAO");
+        $this->load->library('upload');
     }
 
     public function cadastrar() {
@@ -20,9 +21,9 @@ class Bolao extends CI_Controller {
         $this->form_validation->set_rules('grupo', 'Grupo', 'trim|required|max_length[100]');
         $this->form_validation->set_rules('valorcota', 'Valor da cota', 'required');
         $this->form_validation->set_rules('totalcota', 'Total de cotas', 'required');
-
+        
         if ($this->form_validation->run()):
-            $dados = elements(array('jogo', 'grupo', 'valorcota', 'totalcota'), $this->input->post());
+            $dados = elements(array('jogo', 'grupo', 'valorcota', 'totalcota','userfile'), $this->input->post());
             $dados['cotadisponivel'] = $dados['totalcota'];
             $this->BolaoDAO->do_insert($dados);
         endif;
@@ -33,6 +34,8 @@ class Bolao extends CI_Controller {
         );
         $this->load->view("exibirDados", $dados);
     }
+    
+    
 
     public function consultar() {
         $bolao = $this->BolaoDAO->get_all();
@@ -43,7 +46,7 @@ class Bolao extends CI_Controller {
         );
         $this->load->view("exibirDados", $dados);
     }
-    
+
     public function comprar() {
         $dados = array(
             'titulo' => 'Amigos Da Sorte',

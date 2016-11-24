@@ -4,7 +4,7 @@
    <a href = "<?php echo base_url("pagina/Regulamento"); ?>"> Regulamento /</a>                
    <a href = "<?php echo base_url("pagina/ComoJogar"); ?>"> Como Jogar /</a>
    <a href = "<?php echo base_url("pagina/BilhetesPremiados"); ?>"> Bilhetes Premiados /</a>
-   <a href = "<?php echo base_url("pagina/Jogarboloes"); ?>"> Jogar Bolões /</a>
+   <a href = "<?php echo base_url("bolao/consultar"); ?>"> Jogar Bolões /</a>
    <a href = "<?php echo base_url("pagina/QuemSomos"); ?>"> Quem Somos /</a>                    
    <a href = "<?php echo base_url("pagina/FaleConosco"); ?>"> Fale Conosco /</a>
    <br>

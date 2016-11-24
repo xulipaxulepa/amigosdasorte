@@ -18,13 +18,12 @@
             <ul class="nav navbar-nav">
                 <?php if ($this->session->isAdministrador == 1) { ?>
                 <li><a href="<?php echo base_url("bolao/cadastrar")?>">Cadastrar Bolão</a></li>
-                
+                <li><a href="<?php echo base_url("upload/do_upload")?>">Cadastrar Bilhete Premiado</a></li>
                 <li><a href="<?php echo base_url("usuario/logout")?>">Sair</a></li>
                 <?php } else { ?>
                     <li><a href = "<?php echo base_url(""); ?>"> Home /</a></li>
                     <li><a href = "<?php echo base_url("Bolao/Consultar"); ?>"> Bolões Lotéricos /</a></li>
                     <li><a href = "<?php echo base_url("pagina/Premiacoes"); ?>"> Premiações /</a></li>
-                    <li><a href = "<?php echo base_url("pagina/Atendimento"); ?>"> Atendimento /</a></li>
                     <li><a href = "<?php echo base_url("Usuario/Cadastrar"); ?>"> Cadastre-se /</a></li>
                     <li><a href = "<?php echo base_url("Usuario/login"); ?>"> Acessar Conta /</a></li>
                     
