@@ -12,7 +12,7 @@ class Upload extends CI_Controller {
     }
 
     public function do_upload() {
-        $config['upload_path'] = './uploads/';
+        $config['upload_path'] = './uploads/imagens';
         $config['allowed_types'] = 'gif|jpg|png';
 
 
@@ -33,6 +33,26 @@ class Upload extends CI_Controller {
         }
     }
 
+    public function do_upload_texto() {
+        $config['upload_path'] = './uploads/textos';
+        $config['allowed_types'] = 'txt|pdf|odt';
+        
+        $this->load->library('upload', $config);
+
+        if (!$this->upload->do_upload('userfile')) {
+            $dados = array(
+                'titulo' => 'Amigos Da Sorte',
+                'tela' => 'upload_form_texto',
+            );
+            $this->load->view("exibirDados", $dados);
+        } else {
+            $dados = array(
+                'titulo' => 'Amigos Da Sorte',
+                'tela' => 'upload_success_texto',
+            );
+            $this->load->view("exibirDados", $dados);
+        }
+    }
 }
 
 ?>

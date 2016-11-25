@@ -12,7 +12,13 @@
                 <th><a href="http://pt-br.tinypic.com?ref=708bjk" target="_blank"><img src="http://i64.tinypic.com/708bjk.jpg" border="0" alt="Image and video hosting by TinyPic"></a>Total de Cotas</th>
                 <th><a href="http://pt-br.tinypic.com?ref=708bjk" target="_blank"><img src="http://i64.tinypic.com/708bjk.jpg" border="0" alt="Image and video hosting by TinyPic"></a>Cotas Disponiveis</th>
                 <th><a href="http://pt-br.tinypic.com?ref=708bjk" target="_blank"><img src="http://i64.tinypic.com/708bjk.jpg" border="0" alt="Image and video hosting by TinyPic"></a>Quantidade Desejadas</th>
-                <th>Compre Aqui!</th>
+                <?php if ($this->session->isAdministrador == 1) {
+                echo '<th>Registrar Ganhador</th>';
+                echo '<th>Cadastrar Lista de Jogos</th>';
+                } else{
+                    echo '<th>Comprar Aqui!</th>';
+                
+                }?>
             </tr>
             <?php
             foreach ($bolao->result() as $boloes) {
@@ -41,8 +47,21 @@
                     echo '</select>' ;
                     echo '</td>';
                     echo '<td>';
+                    if ($this->session->isAdministrador == 1) {
+                        if($boloes->ganhador == 1){
+                           echo 'Bolão ganhador';
+                        } else{
+                        echo '<a href="'. base_url('bolao/ganhador/'.$boloes->id).'" class="btn btn-success btn-xs" role="button"> Ganhador </a>';
+                        }                        
+                        } else {
         echo '<a href="'. base_url('bolao/comprar').'" class="btn btn-success btn-xs" role="button"> Comprar </a>';            
         echo '</td>';
+                    }
+                    if ($this->session->isAdministrador == 1) {
+                    echo '<td>';
+                    echo '<a href="'. base_url('upload/do_upload_texto/'.$boloes->grupo).'" class="btn btn-success btn-xs" role="button"> Registrar </a>';
+                    echo '</td>';
+                    }
                     echo '</tr>';
                     
                 endif;
@@ -60,7 +79,13 @@
                 <th><a href="http://pt-br.tinypic.com?ref=708bjk" target="_blank"><img src="http://i64.tinypic.com/708bjk.jpg" border="0" alt="Image and video hosting by TinyPic"></a>Total de Cotas</th>
                 <th><a href="http://pt-br.tinypic.com?ref=708bjk" target="_blank"><img src="http://i64.tinypic.com/708bjk.jpg" border="0" alt="Image and video hosting by TinyPic"></a>Cotas Disponiveis</th>
                 <th><a href="http://pt-br.tinypic.com?ref=708bjk" target="_blank"><img src="http://i64.tinypic.com/708bjk.jpg" border="0" alt="Image and video hosting by TinyPic"></a>Quantidade Desejadas</th>
-                <th>Compre Aqui!</th>
+                <?php if ($this->session->isAdministrador == 1) {
+                echo '<th>Registrar Ganhador</th>';
+                echo '<th>Cadastrar Lista de Jogos</th>';
+                } else{
+                    echo '<th>Comprar Aqui!</th>';
+                
+                }?>
             </tr>
             <?php
             foreach ($bolao->result() as $boloes) {
@@ -89,9 +114,23 @@
                     echo '</select>' ;
                     echo '</td>';
                     echo '<td>';
-        echo '<a href="" class="btn btn-success btn-xs" role="button"> Comprar </a>';            
+                    if ($this->session->isAdministrador == 1) {
+                        if($boloes->ganhador == 1){
+                           echo 'Bolão ganhador';
+                        } else{
+                        echo '<a href="'. base_url('bolao/ganhador/'.$boloes->id).'" class="btn btn-success btn-xs" role="button"> Ganhador </a>';
+                        }                        
+                        } else {
+        echo '<a href="'. base_url('bolao/comprar').'" class="btn btn-success btn-xs" role="button"> Comprar </a>';            
         echo '</td>';
+                    }
+                    if ($this->session->isAdministrador == 1) {
+                    echo '<td>';
+                    echo '<a href="'. base_url('upload/do_upload_texto/'.$boloes->grupo).'" class="btn btn-success btn-xs" role="button"> Registrar </a>';
+                    echo '</td>';
+                    }
                     echo '</tr>';
+                    
                 endif;
             }
             ?>
@@ -107,7 +146,13 @@
                 <th><a href="http://pt-br.tinypic.com?ref=708bjk" target="_blank"><img src="http://i64.tinypic.com/708bjk.jpg" border="0" alt="Image and video hosting by TinyPic"></a>Total de Cotas</th>
                 <th><a href="http://pt-br.tinypic.com?ref=708bjk" target="_blank"><img src="http://i64.tinypic.com/708bjk.jpg" border="0" alt="Image and video hosting by TinyPic"></a>Cotas Disponiveis</th>
                 <th><a href="http://pt-br.tinypic.com?ref=708bjk" target="_blank"><img src="http://i64.tinypic.com/708bjk.jpg" border="0" alt="Image and video hosting by TinyPic"></a>Quantidade Desejadas</th>
-                <th>Compre Aqui!</th>
+                <?php if ($this->session->isAdministrador == 1) {
+                echo '<th>Registrar Ganhador</th>';
+                echo '<th>Cadastrar Lista de Jogos</th>';
+                } else{
+                    echo '<th>Comprar Aqui!</th>';
+                
+                }?>
             </tr>
 <?php
 foreach ($bolao->result() as $boloes) {
@@ -136,10 +181,23 @@ foreach ($bolao->result() as $boloes) {
         echo '</select>' ;
         echo '</td>';
         echo '<td>';
-        echo '<a href="" class="btn btn-success btn-xs" role="button"> Comprar </a>';            
+                    if ($this->session->isAdministrador == 1) {
+                        if($boloes->ganhador == 1){
+                           echo 'Bolão ganhador';
+                        } else{
+                        echo '<a href="'. base_url('bolao/ganhador/'.$boloes->id).'" class="btn btn-success btn-xs" role="button"> Ganhador </a>';
+                        }                        
+                        } else {
+        echo '<a href="'. base_url('bolao/comprar').'" class="btn btn-success btn-xs" role="button"> Comprar </a>';            
         echo '</td>';
-        echo '</tr>';
-    endif;
+                    }
+                    if ($this->session->isAdministrador == 1) {
+                    echo '<td>';
+                    echo '<a href="'. base_url('upload/do_upload_texto').'" class="btn btn-success btn-xs" role="button"> Registrar </a>';
+                    echo '</td>';
+                    }
+                    echo '</tr>';
+                    endif;
 }
 ?>
 

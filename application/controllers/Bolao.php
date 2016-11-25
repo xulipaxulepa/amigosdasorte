@@ -23,10 +23,10 @@ class Bolao extends CI_Controller {
         $this->form_validation->set_rules('totalcota', 'Total de cotas', 'required');
         
         if ($this->form_validation->run()):
-            $dados = elements(array('jogo', 'grupo', 'valorcota', 'totalcota','userfile'), $this->input->post());
+            $dados = elements(array('jogo', 'grupo', 'valorcota', 'totalcota'), $this->input->post());
             $dados['cotadisponivel'] = $dados['totalcota'];
             $this->BolaoDAO->do_insert($dados);
-        endif;
+        endif;       
 
         $dados = array(
             'titulo' => 'Amigos Da Sorte',
@@ -53,6 +53,15 @@ class Bolao extends CI_Controller {
             'tela' => 'bolao/comprar',
         );
         $this->load->view("exibirDados", $dados);
+    }
+    
+    public function ganhador($id)
+    {
+            $dados = array('ganhador' => true);
+            $condicao = array('id' => $id);
+            $this->BolaoDAO->do_update($dados, $condicao);
+            redirect('inicio/');
+        
     }
 
 }
