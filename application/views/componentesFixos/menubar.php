@@ -20,17 +20,47 @@
                 <li><a href = "<?php echo base_url(""); ?>"> Home /</a></li>
                 <li><a href="<?php echo base_url("bolao/cadastrar")?>">Cadastrar Bolão /</a></li>
                 <li><a href="<?php echo base_url("upload/do_upload")?>">Cadastrar Bilhete Premiado /</a></li>
-                <li><a href="<?php echo base_url("usuario/logout")?>">Sair /</a></li>
+                <?php } if ($this->session->email != '' || $this->session->email != null) { ?>
+                    <?php if($this->session->isAdministrador == 1) {
+                    } else { ?>
+                        <li><a href = "<?php echo base_url(""); ?>"> Home /</a></li>
+                    <li><a href = "<?php echo base_url("Bolao/Consultar"); ?>"> Bolões Lotéricos /</a></li>
+                    <li><a href = "<?php echo base_url("pagina/Premiacoes"); ?>"> Premiações /</a></li>
+                    <?php } ?>
+                    
+                    
                 <?php } else { ?>
                     <li><a href = "<?php echo base_url(""); ?>"> Home /</a></li>
                     <li><a href = "<?php echo base_url("Bolao/Consultar"); ?>"> Bolões Lotéricos /</a></li>
                     <li><a href = "<?php echo base_url("pagina/Premiacoes"); ?>"> Premiações /</a></li>
                     <li><a href = "<?php echo base_url("Usuario/Cadastrar"); ?>"> Cadastre-se /</a></li>
-                    <li><a href = "<?php echo base_url("Usuario/login"); ?>"> Acessar Conta /</a></li>
                     
-                <?php } ?>    
+                <?php } ?>
             </ul>
-
-        </div><!--/.navbar-collapse -->
-    </div><!--/.container-fluid -->
+            <ul class="nav navbar-nav navbar-right">
+                <?php
+                if ($this->session->email != '' || $this->session->email != null):
+                    ?>
+                    <div class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true"
+                               aria-expanded="false"><?php echo $this->session->nome ?> <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                
+                                <li role="separator" class="divider"></li>
+                                <li>
+                                    <a href="<?php echo base_url("usuario/logout")?>">Sair</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </div>
+                    <?php
+                else:
+                    echo '<li><a href="'.base_url("usuario/login").'">Acessar Conta</a></li>';
+                endif;
+                ?>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
 </nav>
