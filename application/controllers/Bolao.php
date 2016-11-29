@@ -13,6 +13,8 @@ class Bolao extends CI_Controller {
         $this->load->library('table');
         $this->load->library('session');
         $this->load->model('Bolao_model', "BolaoDAO");
+        $this->load->model('Compra_Model', "CompraDAO");
+        
         $this->load->library('upload');
     }
 
@@ -21,11 +23,13 @@ class Bolao extends CI_Controller {
         $this->form_validation->set_rules('grupo', 'Grupo', 'trim|required|max_length[100]');
         $this->form_validation->set_rules('valorcota', 'Valor da cota', 'required');
         $this->form_validation->set_rules('totalcota', 'Total de cotas', 'required');
+        $this->form_validation->set_rules('link', 'Link', 'trim|required');
         
         if ($this->form_validation->run()):
-            $dados = elements(array('jogo', 'grupo', 'valorcota', 'totalcota'), $this->input->post());
+            $dados = elements(array('jogo', 'grupo', 'valorcota', 'totalcota','link'), $this->input->post());
             $dados['cotadisponivel'] = $dados['totalcota'];
             $this->BolaoDAO->do_insert($dados);
+            
         endif;       
 
         $dados = array(
@@ -35,7 +39,20 @@ class Bolao extends CI_Controller {
         $this->load->view("exibirDados", $dados);
     }
     
-    
+    public function comprar($idbolao){
+        $dados1 = array('idbolao' => $idbolao, 'emailusuario' => $this->session->email);
+        $this->CompraDAO->do_insert($dados1);
+        $bolao = $this->BolaoDAO->get_all();        
+        $id = $idbolao;
+        $dados2 = array(
+            'titulo' => 'Amigos Da Sorte',
+            'tela' => 'bolao/comprar',
+            'idbolao' => $id,
+            'bolao'=> $bolao
+            
+        );
+        $this->load->view("exibirDados", $dados2);            
+        }
 
     public function consultar() {
         $bolao = $this->BolaoDAO->get_all();
@@ -47,14 +64,6 @@ class Bolao extends CI_Controller {
         $this->load->view("exibirDados", $dados);
     }
 
-    public function comprar() {
-        $dados = array(
-            'titulo' => 'Amigos Da Sorte',
-            'tela' => 'bolao/comprar',
-        );
-        $this->load->view("exibirDados", $dados);
-    }
-    
     public function ganhador($id)
     {
             $dados = array('ganhador' => true);

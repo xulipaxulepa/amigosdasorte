@@ -44,6 +44,11 @@
                         echo form_input(array('id' => 'totalcota', 'name' => 'totalcota', 'class' => 'form-control'), set_value('totalcota')) . "<br />";
                         ?>
                         <?php
+                        echo '<h3>Clique no link abaixo para cadastrar o bolão no PagSeguro</h3>';
+                        echo '<a href="https://pagseguro.uol.com.br/integracao/botoes_de_pagamento.jhtml#comprar" target="_blank" class="btn btn-success btn-xs" role="button"> Cadastrar o bolão no PagSeguro </a>';
+                        echo '<br>';
+                        echo form_label('Link do Pagseguro (*)') . "<br />";
+                        echo form_textarea(array('id' => 'link', 'name' => 'link', 'class' => 'form-control'), set_value('link')) . "<br />";
                         echo '<span id="sumit" style="display: inline;float: right;">';
                         echo form_submit(array('name' => 'cadastrar', 'class' => 'btn btn-success'), 'Cadastrar') . "<br />";
                         echo '</span>';
